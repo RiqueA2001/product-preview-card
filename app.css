@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--cream);
+}
+
+p {
+  font-size: 14px;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  transition: 0.3s;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-text {
+  font-family: 'Montserrat', sans-serif;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text .perfume {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: var(--dark-grayish-blue);
+  font-size: 0.9rem;
+}
+
+.card-text h1 {
+  font-family: 'Fraunces', serif;
+  margin-top: 0.4rem;
+  color: var(--very-dark-blue);
+}
+
+.card-text p {
+  color: var(--dark-grayish-blue);
+  margin-bottom: 3rem;
+  margin-top: 0.7rem;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.price {
+  font-family: 'Fraunces', serif;
+  color: var(--cyan);
+  font-size: 2rem;
+}
+
+.old-price {
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue);
+}
+
+button {
+  margin-top: 1rem;
+  background-color: var(--cyan);
+  border: none;
+  padding: 0.9rem;
+  border-radius: 0.4em;
+  color: var(--white);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: hsl(158, 35%, 20%);
+  cursor: pointer;
+}
+
+button img {
+  margin-right: 0.5rem;
+}
+
+.transform {
+  transform: rotateZ(360deg);
+}
+
+.attribution {
+  text-align: center;
+  padding: 0 0.5rem;
+  position: absolute;
+  bottom: 5px;
+}
+
+@media (min-width: 776px) {
+  .card {
+    flex-direction: row;
+    align-items: center;
+  }
+  .card-img {
+    width: 50%;
+  }
+  .card-text {
+    width: 50%;
+    padding: 2rem;
+  }
+}
